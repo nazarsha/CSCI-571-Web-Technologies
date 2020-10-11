@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body, html{
+  background-color: white;
+  margin: 0;
+  padding:0;
+}
+
+
+a:link    {
+  text-decoration:  none;
+} 
+a:visited {
+  text-decoration:  none;
+} 
+  
+a.linkHove:hover {
+  color:LightGray;
+  background-color:transparent;  
+}  
+
+
+@font-face {
+  font-family: "liberation";
+  src: url(http://www-scf.usc.edu/~nazarsha/font/liberationsans-regular.ttf) format('truetype'),
+       url(http://www-scf.usc.edu/~nazarsha/font/liberationsans-bold.ttf) format('truetype');
+}
+
+.topLeftText p {
+	font-size: 13px;
+	font-family: Helvetica;
+	color: rgb(96, 94, 94);
+	color: darkslategrey;
+	position:relative;
+	left:155px;
+	margin-top: 30px;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+.TopTitle {
+  /* color: rgb(193, 163, 104); */
+  color: rgb(201, 173, 122);
+  font-size: 30px;
+  font-family: "liberation", "Arial", sans-serif;
+  font-weight:100;
+  position:relative;
+  top:-50px;
+  left: 500px;
+  letter-spacing: 0.3em;
+  font-weight:100;
+}
+
+.header {
+	margin:50px 0 -50px -10px;
+}
+
+.header ul{
+  border-top: 2px solid rgb(233,233,233);
+  font-family: Helvetica;
+  font-size: 14px;
+  display:table;
+  table-layout: fixed;
+  width:1200px;
+  position:relative;
+  top:-50px;
+  padding:0 90px;
+  padding-right:120px;
+  padding-left:110px;
+}
+
+
+.header li {
+  display: table-cell;
+  position:relative;
+  padding-left: 1px;
+  width:20px;  
+}
+
+.header a {
+  display:block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.pagelink {
+  color: rgb(96, 94, 94);	
+  display:block;
+  text-align: center;
+}
+
+.home {
+  color: rgb(201, 173, 122);
+  display:block;
+  text-align: center;
+}
+
+
+#Image1 {
+  background-image:url("http://cs-server.usc.edu:45678/hw/hw3/images/image6.jpg");
+  /* background-size: 1900px 1200px; */
+  background-size: 1900px auto;
+  background-repeat: no-repeat;	
+  background-attachment: fixed;
+  background-position: -370px 25px;
+  width:1200px;
+  height:650px;
+  max-width:1200px;
+  max-height:650px;
+  overflow:hidden;
+  position:relative;
+   
+}
+
+.row {
+	width:1200px;
+}
+
+.column1 {
+    float: left;
+    width: 600px;     
+	margin:0;
+	padding-left:130px;
+	padding-right:22px;
+}
+
+.column2 {
+    float: left;
+    width: 600px;     
+	margin:0;
+ 	padding-right:125px;
+	padding-left:22px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+	margin: 100px 0;
+	
+}
+
+
+.image-left {
+	float:right;
+/* 	padding-right:22px;
+	padding-left:130px;
+ */	width:445px;
+}
+
+.image-right {
+	float:left;
+/* 	padding-right:75px;
+	padding-left:22px;
+ */	width:445px;
+}
+
+#img1 {
+	padding-top:125px;
+}
+
+#part2 {
+	padding-left:27px;
+}
+
+.part2-top{
+	margin-bottom:5px;
+	margin-top:50px;
+	font-family:Helvetica;
+	color:darkslategrey;
+	font-size:13px;
+	font-weight:normal;
+	letter-spacing : 0.15em;
+	text-align:left;	
+}
+
+.part2-topTitle {
+	margin-top:0;
+	/*font-family:Georgia, serif;*/
+	text-align:left;		
+}
+
+h1.part2-topTitle {
+	font-family: 'Libre Baskerville', serif;
+	/* color: rgb(188, 155, 93); */	
+    color: rgb(200, 172, 121);
+	font-size:35px;
+	font-weight:400;
+}
+
+.part2-text {
+	font-family:Arial;
+    /* color: darkslategrey; */
+	color: rgb(96, 94, 94);	
+	font-size:17px;
+	text-align:left;		
+}
+
+.part2-text a {
+	color:black;
+}
+
+.part2-text span  {
+	position:relative;
+	top:2px;
+}
+
+.part2-link {
+	font-family:Arial;
+    color: black;
+	text-align:left;
+	font-size: 35px;
+}
+
+#part3 {
+	padding-left:0px;
+}
+
+
+.part3-topTitle {
+	/*font-family:Georgia, serif;*/
+    /* color: #BD9B5C; */
+	padding-top:90px;
+}
+
+h1.part3-topTitle {
+	font-family: 'Libre Baskerville', serif;
+	/* color: rgb(188, 155, 93); */	
+    color: rgb(193, 163, 104);
+	font-size:35px;
+	font-weight:500;
+}
+
+.part3-text {
+	font-family:Arial;
+    /* color: darkslategrey; */
+	color: rgb(96, 94, 94);	
+	font-size:17px;
+	text-align:left;		
+}
+
+.part3-text a {
+	color:black;
+}
+
+.part3-text span  {
+	position:relative;
+	top:2px;
+}
+.image-center {
+	margin:0;
+	width:100%;
+	padding-left: 12.5%;
+	padding-right: 12.5%;
+	text-align:center;
+}
+
+#img3 {
+	padding-top:100px;
+}
+
+#img4 {
+	padding-top:40px;
+}
+
+#img2 {
+	padding-bottom:100px;
+	padding-top:45px;
+}
+
+#banner {
+  background-image: url("./images/image7.jpg");
+  background-size: 930px auto;
+  background-repeat: no-repeat;
+  height: 600px;
+  text-align:center;
+  position:relative;
+  left:135px;
+  
+}
+
+#banner .content {
+  background-color:white;
+  border: 1px solid white;
+  position: relative;
+  left:270px;
+  top: 220px;
+  width: 380px;
+  height: 140px;
+  font-family: Georgia, Helvetica,sans-serif;   
+}
+
+#banner .content h1 {
+  /* color:darkslategrey; */
+  color: rgb(96, 94, 94);
+  font-size:30px;
+  margin-top:0;
+  font-weight:normal;
+  -moz-transform:scale(1.1,1); /* Firefox */
+  
+}
+
+#banner .content h2 {
+  padding-top:15px;
+  font-size:12px;
+  font-weight:lighter;
+  color:grey;
+  margin-bottom:2px;
+  margin-top:30px;
+  letter-spacing:0.1em;
+
+}
+
+
+.cm {
+
+	position:relative;
+	text-align:center;
+	
+}
+
+#comments {
+	padding-top:20px;
+	padding-bottom:20px;
+	float: left;
+	width:1200px;	
+}
+
+#comments h1{
+    color: rgb(201, 173, 122);
+	font-size:32px;
+	/* font-family: Georgia, serif; */
+	/* font-family: Palatino, serif; */
+	font-family: 'Libre Baskerville', serif;	
+	font-weight:normal;
+	margin-top:-20px;
+}
+
+#comments h6{
+	color: rgb(96, 94, 94);	
+	font-size:13px;
+	font-weight:lighter;
+	letter-spacing:0.1em;
+	
+}
+
+#bottomPic {
+  padding-top:0;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
+#bottomPic .content{
+  background-image:url("http://cs-server.usc.edu:45678/hw/hw3/images/image5.jpg" );
+  /* background-size: 1200px 750px; */
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0px 35px;
+  width:1200px;
+  height:480px;
+  max-height:480px;
+  max-width:1200px;
+  overflow:hidden;
+}
+
+
+#finalText {
+	background-color: #BD9B5C;
+	text-align:left;	
+	height: 215px;
+	width:1200px;
+	position:relative;
+	top:90px;
+	margin-bottom:100px;
+}
+
+#finalText p {
+	padding:50px 0 0 750px;
+	font-family:Helvetica;
+	font-size:15px;
+	color:white;
+	margin:-90px 0;
+	
+}
+
+
+#blank {
+	position:relative;
+	float:left;
+	height:5px;
+	padding-top:10px;
+}

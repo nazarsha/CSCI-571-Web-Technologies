@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+    <head>
+		<title>HW4</title>
+        <meta charset="utf-8">
+        <style>
+			body {
+				font-family: Helvetica, Arial, sans-serif;
+			}
+			.global {
+				margin: 2em auto;
+				width: 600px;
+				padding: 2em;
+				text-align: center;
+			}
+			.message {
+				margin-bottom: 1em;
+				font-weight:bold;
+			}
+			.queryClass {
+				width: 600px;
+			}
+			
+			.queryClass > input {
+				width: 300px;
+				height : 30px;
+				border-top-right-radius: 0!important;
+				border-bottom-right-radius: 0!important;
+				border-top-left-radius: 0!important;
+				border-bottom-left-radius: 0!important;
+				border: 1px solid lightgray;
+			}
+			
+			.queryClass > button {
+				width: 100px;
+				display: block;
+				position:relative;
+				left:250px;
+				text-align:center;
+				border: 1px solid gray;
+				margin: 20px 0;
+			}
+		  
+        </style>
+
+        <script type="text/javascript">
+			
+			var emptyRow = "<td></td>";
+            function isEmpty(str) {
+              if(str.replace(/^\s+|\s+$/g, '').length == 0)throw "empty"
+            }
+
+			function loadJSON (url) {
+                if (window.XMLHttpRequest) {
+                    xmlhttp=new XMLHttpRequest();
+                }else {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+				try {
+					xmlhttp.open("GET",url,false); //open, send, responseText are
+					xmlhttp.send(); //properties of XMLHTTPRequest
+					if (xmlhttp.statusText != "OK"){
+						return {stat: 'JSON file does not exist.'}
+					}
+					return { stat:'Success', json:xmlhttp.responseText };
+				}
+				catch (e) {
+					return {stat: 'JSON file does not exist.'}
+				}
+			} 			
+			
+			function createHTML(jsonDoc){
+			
+				if (!jsonDoc) {
+					return {stat: 'Error in JSON file.'};
+				}
+//				if (jsonDoc.activeElement){
+//					if (jsonDoc.activeElement.nodeName == 'parseerror'){
+//						return {stat: 'Error in JSON file.'};
+//					}
+//					
+//				}
+			
+				try {
+					var myObj = JSON.parse(jsonDoc);					
+				} catch (e){
+					return {stat: 'Error in parsing JSON file.' + e};
+				}
+								
+				try {
+					var table = myObj.Mainline.Table;
+				} catch (e){
+					return {stat: 'Invalid JSON file.' + e};
+					
+				}								
+				var myKeys = Object.keys(table); 
+				var hasHead = myKeys.includes('Header');				
+				console.log('head: ', head)
+				console.log('table: ', table)
+				if ( hasHead == false){
+					return { stat: 'No "Header" tag found in JSON.'} ;
+				}
+				else var head = table.Header;
+				
+				var hasData =  Object.keys(head).includes('Data');
+				if (hasData == false){
+					return { stat: 'No "Data" tag found in the Header.'} ;
+				} 
+				else var head_data = head.Data;
+				if (head_data.length == 0 ){
+					return {stat: 'No head data available'};
+				}
+
+							
+				var outHTML = '<!doctype html>\n';
+				outHTML += '<html>\n<head>\n<title>Trucking List</title>\n';
+				outHTML += '<style>table, th, td {\n width:1200px;\n \n border: 1px solid gray;\n text-align: left; \n}';	
+				outHTML += '.fill \n{\n width: 300px;\n margin:0; padding:0; \n}\n th, td \n{\n width: 300px; \n}';
+				outHTML += '\nimg {\n  width: 100%; \n margin:0; padding:0; \n}\n';
+				outHTML += '</style>\n</head>\n';
+				//border-collapse: collapse;
+				outHTML += '<body>\n';
+				outHTML += "<table style='border:1'>\n";
+				//adding first row
+				outHTML += "<tr>\n";
+				for (i = 0; i < head_data.length; i++){
+					outHTML += "<th style='text-align:center'>" + head_data[i] + '</th>\n';
+				}
+				outHTML += '</tr>\n';
+										
+				var hasRow = myKeys.includes('Row');
+				if ( hasRow == false ){
+					return { stat: 'JSON file does not contain trucking company entries.'};						
+				} 
+				else row = table.Row;
+				if (row.length == 0) {
+					return { stat: 'JSON file does not contain trucking company entries.'};
+				} 
+
+				//adding content
+				for (var i=0; i < row.length; i++){
+					var curRow = row[i];
+					console.log(curRow);
+					outHTML += '<tr>\n';
+					var rowKeys = Object.keys(curRow);
+					for (var j=0; j < rowKeys.length; j++){
+						var curKey = rowKeys[j];
+						var curItem = curRow[curKey];
+						console.log(curItem);
+						if (is_string(curItem)){
+							if (is_image(curItem))
+								outHTML += convertToImage(curItem);
+							else if (curItem.indexOf('www') != -1)
+								outHTML += convertToLink(curItem);
+							else 
+							outHTML += convertToText(curItem);
+						
+						} 
+						//so it's object, namely HUB
+						else if (is_object(curItem)){
+							outHTML += convertObj(curItem);
+							//console.log(curItem);
+						}
+						else {							
+							outHTML += convertToText(curItem);
+						}
+					}					
+					outHTML += '</tr>\n'
+				}
+					
+					
+				outHTML += '</table>\n'
+				outHTML += '</body>\n</html>\n';
+												
+				return {stat:'Success', html: outHTML};
+				
+			}
+			
+			function is_string(st){
+				//src: https://www.webbjocke.com/javascript-check-data-types/
+				return typeof st === 'string' || st instanceof String;
+			}
+			
+			function is_object (st) {
+			//src:https://www.webbjocke.com/javascript-check-data-types/
+				return st && typeof st === 'object' && st.constructor === Object;
+			};
+			
+			function is_image(st){
+				return st.indexOf('jpg') != -1 || st.indexOf('png') != -1
+			}
+			
+			function convertToText(el){
+				if (el == null) return '<td></td>';
+				return '<td>'+el+'</td>';			
+			}
+			
+			
+			function convertToLink(url){
+				return "<td><a href='"+url+"'>" + url + "</a></td>";			
+			}
+			
+			function convertToImage(el){
+			    return "<td style='text-align:center'>\n<div class='fill'/>\n<img src='" + el + "'/></td>";
+			}
+            
+			function convertObj(el){
+				var elKeys = Object.keys(el);
+				if (elKeys.length == 0){
+					return '<td></td>';
+				}
+				var output = '<td><ul>\n';
+				for (var i=0; i < elKeys.length; i++){
+					var cur = el[elKeys[i]];
+					for (var j=0; j < cur.length; j++){
+						if (j == 0) output += "<li style='font-weight:bold'>";
+						else output += '<li>';
+						if (cur[j] == null){
+							output += '</li>\n';								
+						} else { 
+							output += cur[j]+'</li>\n';		
+						}
+						console.log(j, 'here:', cur[j]);
+											
+					}
+				}
+				output += '</ul></td>\n';
+				return output;
+			}
+			
+			function drawScreen(htmlVals){			
+				var hWin = window.open("", "", "scrollbars=yes, resizable=yes, width=1250, height=1000" );
+				hWin.document.write(htmlVals);
+				hWin.document.close();  			
+			}
+			
+			
+			
+            function load_execute(){
+                var url = document.getElementById("query").value;
+                if (!url){
+                    alert("Input URL is empty!");
+                    return;
+                }
+				var docStatus = loadJSON(url);
+				if (docStatus.stat == 'Success') {
+					console.log('Loaded JSON successfully');
+					var jsonDoc = docStatus.json;
+				}
+				else {
+					alert(docStatus.stat);
+					return;
+				}
+				
+				var jsonVals = createHTML(jsonDoc);
+				if (jsonVals.stat == 'Success'){
+					drawScreen(jsonVals.html);
+				} else {
+					alert (jsonVals.stat);
+				}
+				
+				return;				
+            }
+
+			
+        </script>
+		
+	</head>
+    <body>
+        <div class="global">
+			<div class="message">
+				Enter URL for Trucking List JSON File
+			</div>
+			<form class="queryClass" action="javascript:load_execute()">
+				<input type="text" name="query" id="query"/>
+				<button>Submit Query</button>
+			</form>
+        </div>
+
+		
+    </body>
+
+</html>

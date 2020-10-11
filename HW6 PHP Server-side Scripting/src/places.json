@@ -1,0 +1,162 @@
+[
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "TLT Food",
+        "address": "1116 Westwood Blvd, Los Angeles",
+        "id": "ChIJtSJ9j4G8woARVGVwDskvFJA",
+        "lat": 34.0603987,
+        "lon": -118.4450372
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Wild Living Foods",
+        "address": "760 S Main St, Los Angeles",
+        "id": "ChIJwfCk1crHwoARLRa9EWdHDws",
+        "lat": 34.042737,
+        "lon": -118.2529126
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "True Food Kitchen",
+        "address": "168 W Colorado Blvd, Pasadena",
+        "id": "ChIJtUeFt3bDwoARdj3_2AProOg",
+        "lat": 34.1454464,
+        "lon": -118.1538679
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Real Food Daily",
+        "address": "414 N La Cienega Blvd, Los Angeles",
+        "id": "ChIJ12ENnLO-woAR4HeJnqmtJOA",
+        "lat": 34.0785862,
+        "lon": -118.3764336
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Native Foods Cafe",
+        "address": "1114 Gayley Ave, Los Angeles",
+        "id": "ChIJK3ByJIK8woAR5TgqOE-ON7I",
+        "lat": 34.0598901,
+        "lon": -118.4459704
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Superba Food + Bread",
+        "address": "1900 Lincoln Blvd, Venice",
+        "id": "ChIJ0zR6mSu7woAR4GeLs8NKAnQ",
+        "lat": 33.9962172,
+        "lon": -118.4563494
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Panda Express",
+        "address": "800 World Way, Los Angeles",
+        "id": "ChIJJzkfXymxwoARUh_rp0IjtSI",
+        "lat": 33.9431005,
+        "lon": -118.398948
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Food Land",
+        "address": "739 S Union Ave, Los Angeles",
+        "id": "ChIJq1k1D6PHwoARl2eibXPeQvY",
+        "lat": 34.0528058,
+        "lon": -118.2720809
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "FOOD LAB",
+        "address": "7253 Santa Monica Blvd, West Hollywood",
+        "id": "ChIJS6QwtNe-woARLQt0PE-Ck0I",
+        "lat": 34.0908993,
+        "lon": -118.347975
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Real Food Daily",
+        "address": "899 E Del Mar Blvd, Pasadena",
+        "id": "ChIJpyiWk17DwoARBcWxdZ9woFQ",
+        "lat": 34.1410298,
+        "lon": -118.1318744
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "True Food Kitchen",
+        "address": "860 S, CA-1 Ste 100, El Segundo",
+        "id": "ChIJGRk6Lv-zwoARddWEpRC2Zkk",
+        "lat": 33.9023668,
+        "lon": -118.394559
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Al & Bea's Mexican Food",
+        "address": "2025 E 1st St, Los Angeles",
+        "id": "ChIJmTx7eg_GwoARCLmjG4eA23A",
+        "lat": 34.0452136,
+        "lon": -118.2140967
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "El Tarasco Mexican Food",
+        "address": "8620 S Sepulveda Blvd, Los Angeles",
+        "id": "ChIJOXdqds2wwoARQ9umaHunYWg",
+        "lat": 33.9591147,
+        "lon": -118.3958441
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Mali Thai Street Food",
+        "address": "3446 Wilshire Blvd, Los Angeles",
+        "id": "ChIJSQ5Qh33HwoARDN2uhM6FW3U",
+        "lat": 34.0613704,
+        "lon": -118.299393
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Street Food Of Seoul",
+        "address": "3500 6th Avenue, Los Angeles",
+        "id": "ChIJz8kyaH3HwoARrkhpM7dz5vM",
+        "lat": 34.0631806,
+        "lon": -118.2985236
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Chick-fil-A",
+        "address": "3758 S Figueroa St, Los Angeles",
+        "id": "ChIJw4k35QnIwoARdyhLCs8th7M",
+        "lat": 34.0166396,
+        "lon": -118.2825561
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Se\u00f1or G's Fresh & Healthy Mexican Food",
+        "address": "343 Culver Blvd, Playa Del Rey",
+        "id": "ChIJLzkmoWawwoAR1_wd64Mg5tc",
+        "lat": 33.9605766,
+        "lon": -118.4466045
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Chick-fil-A",
+        "address": "6750 Sunset Blvd, Los Angeles",
+        "id": "ChIJLVi1syW_woARY1_M2FFZSWU",
+        "lat": 34.097775,
+        "lon": -118.338356
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "A Food Affair",
+        "address": "1515 S Robertson Blvd, Los Angeles",
+        "id": "ChIJ16BECme5woAR_VIOySO4z4k",
+        "lat": 34.0517909,
+        "lon": -118.3843243
+    },
+    {
+        "icon": "https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png",
+        "name": "Sista Mary's Soul Food",
+        "address": "420 W Colorado St, Glendale",
+        "id": "ChIJHZPurvnAwoARr1cE7CnTOgA",
+        "lat": 34.1423376,
+        "lon": -118.2619206
+    }
+]
