@@ -7,4 +7,4 @@ The objectives of this assignment were to
 
 In this exercise, we were asked to create a webpage that allows to search for places information using the Google Places API, and the results were displayed in a tabular format.
 The page will also provide reviews and photos for the selected place.
-A link to the reference solution is provided <b href="https://www.youtube.com/watch?v=1uffTsR2jLk&feature=youtu.be&ab_channel=YUECHUAP" >here</b> <a />.
+A link to the reference solution is provided <b> <a href="https://www.youtube.com/watch?v=1uffTsR2jLk&feature=youtu.be&ab_channel=YUECHUAP">here</a></b>.
