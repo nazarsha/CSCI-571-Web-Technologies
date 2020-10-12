@@ -8,4 +8,4 @@ The objectives of this assignment were to
 <li> Get familiar with third party libraries like Picasso and Volley.</li>
 </ul>
 
-A link to the refernce Android solution is provided <b> <a href=https://www.youtube.com/watch?v=jhmInPC0m4M&feature=youtu.be&ab_channel=IshanKothari> here </a></b>
+A link to the refernce Android solution is provided <b> <a href="https://www.youtube.com/watch?v=jhmInPC0m4M&feature=youtu.be&ab_channel=IshanKothari"> here </a></b>
