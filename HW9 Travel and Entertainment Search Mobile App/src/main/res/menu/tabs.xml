@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/infoIcon"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/share"
+        android:icon="@drawable/info_outline"
+        app:showAsAction="always"
+        android:title="INFO">
+
+    </item>
+
+
+
+    <item
+        android:id="@+id/photosIcon"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:icon="@drawable/photos"
+        android:title="photos"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/mapIcon"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:icon="@drawable/maps"
+        android:title="map"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/revIcon"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:icon="@drawable/review"
+        android:title="reviews"
+        app:showAsAction="always"
+        />
+
+
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="planets_array">
+        <item>Default</item>
+        <item>Airport</item>
+        <item>Amusement Park</item>
+        <item>Aquarium</item>
+        <item>Art Gallery</item>
+        <item>Bakery</item>
+        <item>Bar</item>
+        <item>Beauty salon</item>
+        <item>Bowling alley</item>
+        <item>Bus station</item>
+        <item>Cafe</item>
+        <item>Campground</item>
+        <item>Car rental</item>
+        <item>Casino</item>
+        <item>Lodging</item>
+        <item>Movie theater</item>
+        <item>Museum</item>
+        <item>Night club</item>
+        <item>Park</item>
+        <item>Parking</item>
+        <item>Restaurant</item>
+        <item>Shopping mall</item>
+        <item>Stadium</item>
+        <item>Subway station</item>
+        <item>Taxi stand</item>
+        <item>Train station</item>
+        <item>Transit station</item>
+        <item>Travel agency</item>
+        <item>Zoo</item>
+    </string-array>
+
+
+</resources>

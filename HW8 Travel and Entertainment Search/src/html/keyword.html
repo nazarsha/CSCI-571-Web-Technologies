@@ -1,0 +1,15 @@
+  <div class="form-group row" ng-controller="keywordController as keyCtrl">
+    <label for="keyword" class="col-sm-2 col-form-label">Keyword <span class="red">*</span></label>
+    <div class="col-sm-8">
+      <input name='keyword' ng-model='info.keyword' type="text" class="form-control" id="keyword" placeholder="" required  ng-style="invalidStyle(myForm.keyword)" >
+	  <!-- ng-style="invalidStyle(myForm.keyword)" -->
+      <div class="red" ng-show="shouldShow(myForm.keyword)">
+        Please enter a keyword.
+      </div>	
+	  
+    </div>
+<!-- 	<p> {{info.keyword}} </p> -->
+<!-- 	<h1>{{myForm.keyword.$invalid}}</h1>
+	<h1>{{myForm.keyword.$touched}}</h1>
+ -->	
+  </div>

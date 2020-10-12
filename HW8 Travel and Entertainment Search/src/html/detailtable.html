@@ -1,0 +1,105 @@
+<!-- All buttons -->
+<div class="">
+
+
+	<H3 class="text-center" ng-show="showDetails" > {{curDet_name}} </H3>
+
+
+
+<!-- Details button -->
+  <div class="float-right bottom_margin" ng-show="shouldShowRes() && stats.resultsRetrived">
+    <button type="button" class="btn btn-outline-dark "
+    ng-click = "setToShowDetails();" 
+	ng-disabled = "(!curDet.id)"
+    >
+	<!-- ng-class= "{'disabled' : (!curDet.id)}" -->
+    <!-- ng-disabled = "curDet.id" -->	
+    Details
+      <i class="fas fa-angle-right"></i>
+    </button>
+  </div>
+
+
+<div class="col-lg-12 col-xl-12 col-sm-12 col-xs-12 col-md-12" ng-show="shouldShowDet()">
+  <!-- Results button back-->
+  <div class="float-left bottom_margin" >
+    <button type="button" class="btn btn-outline-dark"
+    ng-click = "setToShowResults();"
+    >
+      <i class="fas fa-angle-left"></i>
+    List
+    </button>
+  </div>
+  
+  
+  <!-- twitter button -->
+  <div class="float-right bottom_margin icon_image " >
+	<a class="twitter-share-button"
+  ng-href="{{getTweetURL(curDet)}}" target="_blank">
+  	<img class=' img-fluid img-thumbnail ' style="border:0px;" src="http://cs-server.usc.edu:45678/hw/hw8/images/Twitter.png" >
+	</a>
+  </div>
+  
+
+ 
+  <!-- fav button -->
+  <div class="float-right bottom_margin " >
+  
+  	<div ng-click='doFav(curDet.id)'>
+
+<!-- 	<i class="gold fas fa-star fa-border"  style="font-size: 30px;"
+	ng-show=" isFav(curDet.id)"></i>
+
+	<i class="fa fa-star-o fa-border " style="font-size: 30px;"
+	ng-show="! isFav(curDet.id)"></i> -->
+
+  	  <img class=' img-fluid img-thumbnail icon_image' src="../icons/star_solid_gold.jpg" ng-show=" isFav(curDet.id)" >
+  	  <img class=' img-fluid img-thumbnail icon_image' src="../icons/star.svg" ng-show="! isFav(curDet.id)" >
+  	</div>
+  
+  </div>
+
+<BR>
+<BR>
+
+<div class=" ">
+
+<!-- code from : "https://www.codeply.com/go/Q9bGuWGA35/bootstrap-4-tabs-right-align" -->
+
+
+  <ul class="col-lg-12 col-xl-12 col-sm-12 col-xs-12 col-md-12 nav nav-tabs small justify-content-end" role="tablist">
+      <li class="nav-item"><a class="nav-link active" 
+	  data-toggle="tab" href="#Info" role="tab">Info</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#photosT" role="tab">Photos</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#map" role="tab">Map</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#revs" role="tab">Reviews</a></li>
+  </ul>
+
+  <div class="tab-content py-4">
+      <div class="tab-pane active" id="Info" role="tabpanel">
+		   <infotab></infotab>
+      </div>
+
+
+      <div class="tab-pane fade in" id="photosT" role="tabpanel">
+			<photostab></photostab>
+			
+      </div>
+      <div class="tab-pane  fade in" id="map" role="tabpanel">
+				<maptab></maptab>
+      </div>
+      <div class="tab-pane  fade in" id="revs" role="tabpanel">
+			  
+			<reviewtab></reviewtab>
+      </div>
+
+  </div>
+
+
+<!-- Details table -->
+
+</div>
+
+</div>
+
+

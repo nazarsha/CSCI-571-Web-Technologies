@@ -1,0 +1,56 @@
+<div class="" ng-controller = "reviewController as revCtrl">
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" id="reviewButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-model = "revCtrl.reviewType" >
+    {{revCtrl.reviewType}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="reviewButton">
+    <a class="dropdown-item" ng-click="revCtrl.reviewType = 'Google Reviews'">Google Reviews</a>
+    <a class="dropdown-item" ng-click="revCtrl.reviewType = 'Yelp Reviews'">Yelp Reviews</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" id="orderButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-model="revCtrl.order">
+    {{revCtrl.order}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="orderButton">
+    <a class="dropdown-item" ng-click="revCtrl.order = 'Default Order'">Default Order</a>
+    <a class="dropdown-item" ng-click="revCtrl.order = 'Highest Rating'">Highest Rating</a>
+    <a class="dropdown-item" ng-click="revCtrl.order = 'Lowest Rating'">Lowest Rating</a>
+    <a class="dropdown-item" ng-click="revCtrl.order = 'Most Recent'">Most Recent</a>
+    <a class="dropdown-item" ng-click="revCtrl.order = 'Least Recent'">Least Recent</a>		
+	</div>
+</div>
+<BR>
+<BR>
+<BR>
+<!-- <p>{{revCtrl.reviewType}}</p>
+<p>{{revCtrl.order}}</p> -->
+
+	<div class="alert alert-warning" role="alert"
+	ng-show="getReviews(revCtrl.reviewType).length == 0">
+	  No records.
+	</div>
+	
+<table class="table table-bordered table-borderless myfade"
+ng-animate-swap="revCtrl.reviewType">
+
+
+ 
+
+  <tr class="review_tr" 
+  ng-repeat="r in getReviews(revCtrl.reviewType) | orderBy: revCtrl.determineOrder(revCtrl.order) ">
+	<td class=""> <a href= "{{r.pic}}" target="_blank">
+	  <img class="img profile_pic" ng-src="{{r.pic}} "  
+	       ng-class="{'rounded-circle': revCtrl.reviewType == 'Yelp Reviews'}"/></a></td>
+	<td class="row"> <a href="{{r.url}}" target="_blank">{{r.auth_name}}</a></td>
+	<td class="row "> <small>
+	  <span ng-repeat="l in [1,2,3,4,5] | limitTo: r.rating">
+      <span class="fa fa-star orange"></span>	  
+	  </span> <span class="grey">{{revCtrl.getTime(r.time) | date : "yyyy-MM-dd H:mm:ss"}}</span></small></td>
+	<td class="row"> {{r.text}}</td>
+  </tr>
+
+</table>
+
+</div>

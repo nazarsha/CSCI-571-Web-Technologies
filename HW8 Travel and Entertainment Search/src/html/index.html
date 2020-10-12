@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+		<!-- Latest minified CSS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	 
+
+	<!-- Angular minified -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+<!-- 	<script src="../javascript/masonry.pkgd.min.js"></script>
+ -->
+<!-- 	Fav icon -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- Twitter -->
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+	<link rel="stylesheet" href="../css/main.css"/>
+	<script src="../javascript/app.js"></script>
+    <script src="../javascript/forms.js"></script>
+    <script src="../javascript/moment.js"></script>
+<script async defer  src="https://maps.googleapis.com/maps/api/js?key=&libraries=places" ></script>
+	
+    <title>Travel and Entertainment Search</title>
+  </head>
+  <body ng-app="myApp">
+
+<div class="container col-lg-10 col-sm-12 col-xs-12" ng-controller="allController as allCtrl">
+  <div class="row">
+    <div class="col-lg-2 col-sm-0"></div>
+	
+<div class="col-lg-8 col-sm-11 col-xs-11 form-style align-items-center"  ng-init="fetchIP()">
+<form name='myForm' class="needs-validation" novalidate >
+  <div > <H3 class="text-center" > Travel and Entertainment Search </H3> </div>
+  
+  <keyword></keyword>
+  
+  <categories></categories>
+
+  <distance></distance>	
+	
+  <from></from>
+
+  <buttons></buttons>
+
+
+</form>
+
+
+
+</div>	
+
+    <div class="col-lg-2 col-sm-0"> </div>
+	
+</div>
+
+<!--   <div class="row">
+    <div class="col"> </div>
+    <div class="col-3">
+      <button class="btn btn-primary">Results</button>
+      <button class="btn btn-primary">Favorites</button>
+    </div>
+    <div class="col"> </div>
+  </div>
+ -->
+
+<div class="row tabs">
+    <div class="col"> </div>
+    <div class="col-lg-3">
+		<ul class="nav nav-pills justify-content-center">
+		  <li class="nav-item">
+			<a class="nav-link" href="#resultTableHref" ng-class="{'active': isSet('1')}" 
+			ng-click="setToResultTab()">Results</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#resultTableHref"  ng-class="{'active': isSet('2')}" ng-click="setToFavTab()">Favorites</a>
+		  </li>
+		</ul>
+    </div>
+    <div class="col"> </div>
+</div>
+
+
+<BR><BR>
+
+
+
+<div id="progBarDiv" class="progress" ng-show="searchInProgress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" ></div>
+
+</div>
+
+<BR>
+
+
+<resultable> </resultable>
+
+
+<BR>
+
+
+	  
+</div>
+
+
+
+
+</body>  
+</html>

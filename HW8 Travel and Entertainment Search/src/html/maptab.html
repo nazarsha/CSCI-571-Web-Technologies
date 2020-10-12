@@ -1,0 +1,65 @@
+<div class=""  ng-if="curDet.id"  >
+<div class="" ng-init="map_init()">
+
+<p hidden>{{map_addMarker(curDet.lat, curDet.lon)}}</p>
+<p hidden>{{map_map_to = curDet.name + ', ' + curDet.address}}</p>
+<!-- <p hidden ng-if ="!map_map_inputLoc.$touced">
+{{map_map_inputLoc = map_getVal(info.dist_from, info.input_loc)}}</p> -->
+
+    
+<form name='myForm' class="needs-validation" novalidate >
+
+<div class="form-row align-items-center">
+    <div class="form-group col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+      <label for="inlineFormInput">From</label>
+      <input type="text" class="form-control mb-2" id="inlineFormInput"  ng-model="map_map_inputLoc" 
+	  googleplace> 
+<!-- 	  <p>{{map_map_inputLoc}}</p> -->
+    </div>
+    <div class="form-group col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+      <label  for="inlineFormInputGroup">To</label>
+        <input type="text" class="form-control bold" id="inlineFormInputGroup" ng-model="map_map_to"  readonly>
+<!-- 	  <p>{{map_map_to}}</p> -->
+    </div>
+	
+	<div class="form-group col-xl-2 col-lg-2 col-sm-12 col-xs-12 ">
+   <label for="travelMode">Travel Mode</label>
+    <select class="form-control" id="travelMode" ng-model="map_travelMode" >
+      <option>Driving</option>
+      <option>Bicycling</option>
+      <option>Transit</option>
+      <option>Walking</option>
+    </select>
+<!-- 	  <p>{{map_travelMode}}</p>
+ -->    </div>
+	
+	
+    <div class="form-group col-xl-2 col-lg-2 col-sm-12 col-xs-12 ">
+	   <label for="getDir"></label>
+      <button type="submit" class="btn btn-primary form-control" id="getDir" ng-click="map_getRoute(map_map_inputLoc, map_travelMode, info.cur_loc, curDet.lat, curDet.lon)">Get Directions</button>
+    </div>
+  </div>
+
+</form>        
+
+  <div class="float-left" ng-model="map_view" ng-click="map_changeView(curDet.lat, curDet.lon)">
+  	<img class=' img-fluid img-thumbnail icon_image' 
+	src="http://cs-server.usc.edu:45678/hw/hw8/images/Pegman.png" 
+	ng-show="map_isView('road')">
+	
+  	<img class=' img-fluid img-thumbnail icon_image' 
+	src="http://cs-server.usc.edu:45678/hw/hw8/images/Map.png" 
+	ng-show="map_isView('street')">
+	
+	
+  </div>
+
+<BR>
+<BR>
+        
+    <div id="mapSS" class="row align-items-center"></div>
+      
+	<div id='directions' class="align-items-center"></div>
+    
+</div>
+</div>

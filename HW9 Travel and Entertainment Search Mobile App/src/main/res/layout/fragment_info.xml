@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:stretchColumns="1"
+    tools:context=".InfoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/info_address_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_address_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/info_phone_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_phone_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textSize="14sp"
+            android:autoLink="phone"
+            android:linksClickable="true"/>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/info_price_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_price_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/info_rating_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/info_rating_val"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:maxHeight="50dp"
+                android:minHeight="28dp"
+                android:isIndicator="true"
+                android:gravity="center_vertical"
+                android:numStars="5"
+                android:stepSize="0.1" />
+
+<!--
+        <RatingBar
+            android:id="@+id/review_rating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.1"
+            app:layout_constraintStart_toEndOf="@+id/review_picture"
+            app:layout_constraintTop_toBottomOf="@+id/review_name" />
+-->
+
+        </LinearLayout>
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/info_url_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_url_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/info_website_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_website_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+
+</TableLayout>

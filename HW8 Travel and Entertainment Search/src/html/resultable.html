@@ -1,0 +1,201 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" /> 
+</head>
+<body>
+ -->
+
+<div id='resultTableHref' class="col-lg-12 col-sm-12 col-xs-12 swap-animation" 
+	 ng-animate-swap="num" >
+
+<detailtable></detailtable>
+ 
+ 
+<div class="alert alert-danger" role="alert" 
+ng-show="showResFailed()">
+  Failed to get search results.
+</div>
+<div class="alert alert-warning" role="alert"
+ng-show="showNoRec()">
+  No records.
+</div> 
+ 
+<!-- Table appears here -->
+<!-- <div   ng-show="getPlaces(tab) && shouldShow()">
+ -->
+<!-- <p ng-show="stats.resultsRetrived"> {{stats.resultsRetrived}}</p>
+<p> {{shouldShow()}}</p> -->
+
+
+<div   class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-responsive-xs" ng-show=" shouldShow() ">
+<table class="table table-hover" id="resultTable">
+<tr ng-show="getPlaces().length">
+<th scope="col-xs-1 col-sm-1 col-lg-1 col-xl-1 col-md-1">#</th>	
+<th scope="col-xs-1 col-sm-1 col-lg-1 col-xl-1 col-md-1">Category</th>
+<th scope="col-xs-4 col-sm-4 col-lg-4 col-xl-4 col-md-4">Name</th>
+<th scope="col-xs-4 col-sm-4 col-lg-4 col-xl-4 col-md-4">Address</th>
+<th scope="col-xs-1 col-sm-1 col-lg-1 col-xl-1 col-md-1">Favorite</th>
+<th scope="col-xs-1 col-sm-1 col-lg-1 col-xl-1 col-md-1">Details</th>
+</tr>	
+
+
+<tr ng-repeat="pl in getPlaces() | limitTo:quantity" 
+ng-show="page == 0" ng-class="{'bg-warning': (isSelected (pl.id))}">
+
+	<!-- $index Practice:  -->
+<th scope="row"> <p> {{$index + 1}} </p> </th>
+
+<td style="text-align:center">
+	<img src="{{pl.value.icon}}" style="width:30px">
+</td>
+<td class="no_wrap">
+	<p class="cursorStyle">{{pl.value.name}}</p>
+</td>
+<td class="no_wrap">
+	<p class="cursorStyle " id="mapRow_1">{{pl.value.address}} </p>
+</td>	
+<td>
+
+<div ng-click='doFav(pl.id)'>
+
+	<i class="gold fas fa-star fa-border i_size_class" 
+	ng-show=" isFav(pl.id) && isSet('1')"></i>
+
+	<i class="fa fa-star-o fa-border i_size_class" 
+	ng-show="! isFav(pl.id)"></i>
+	
+	<i class="fa fa-trash-o fa-border i_size_class" 
+	ng-show=" isFav(pl.id) && isSet('2')"></i> 
+
+	
+ </div>
+</td>
+
+<!-- <td  
+ng-click='getDetails($index, pl.id); setToShowDetails();' class="align-items-center"> -->
+<td  ng-click='sendDetailReq(pl.id); ' class="align-items-center swap-animation" ng-animate-swap="num" >
+
+ <a class="noBlue i_size_class" href="#progBarDiv" ><i class="fa fa-angle-right fa-border" > </i></a>
+
+</td>
+
+</tr>
+
+
+<!-- second page -->
+<div ng-show="$index >= 20 && $index < 40 && page == 1  ">
+
+<tr ng-repeat="pl in getPlaces() | limitTo:quantity : 20" 
+ng-show="page == 1" ng-class="{'bg-warning': (selectedID == pl.id)}">
+
+
+<th scope="row"><p> {{$index + 1 + quantity}} </p> </th>
+
+<td style="text-align:center">
+	<img src="{{pl.value.icon}}" style="width:30px">
+</td>
+<td class="no_wrap">
+	<p class="cursorStyle">{{pl.value.name}}</p>
+</td>
+<td class="no_wrap">
+	<p class="cursorStyle " id="mapRow_1">{{pl.value.address}} </p>
+</td>	
+<td>
+<div ng-click='doFav(pl.id)'>
+
+	<i class="gold fas fa-star fa-border i_size_class" 
+	ng-show=" isFav(pl.id) && isSet('1')"></i>
+
+	<i class="fa fa-star-o fa-border i_size_class" 
+	ng-show="! isFav(pl.id)"></i>
+	
+	<i class="fa fa-trash-o fa-border i_size_class" 
+	ng-show=" isFav(pl.id) && isSet('2')"></i> 
+	
+ </div>
+</td>
+
+<td  ng-click='sendDetailReq(pl.id); ' class="align-items-center">
+
+
+ <a class="noBlue i_size_class" href="#progBarDiv" ><i class="fa fa-angle-right fa-border" > </i></a>
+ 
+</td>
+
+</tr>
+</div>
+
+<!-- third page -->
+
+<div ng-show="$index >= 40 && $index < 60 && page == 2  ">
+
+<tr ng-repeat="pl in getPlaces() | limitTo:quantity : 40" 
+ng-show="page == 2" ng-class="{'bg-warning': (selectedID == pl.id)}">
+
+
+<th scope="row"><p> {{$index + 1 + quantity * 2}} </p> </th>
+
+<td style="text-align:center">
+	<img src="{{pl.value.icon}}" style="width:30px">
+</td>
+<td class="no_wrap">
+	<p class="cursorStyle">{{pl.value.name}}</p>
+</td>
+<td class="no_wrap">
+	<p class="cursorStyle " id="mapRow_1">{{pl.value.address}} </p>
+</td>	
+<td>
+<div ng-click='doFav(pl.id)'>
+
+	<i class="gold fas fa-star fa-border i_size_class" 
+	ng-show=" isFav(pl.id) && isSet('1')"></i>
+
+	<i class="fa fa-star-o fa-border i_size_class" 
+	ng-show="! isFav(pl.id)"></i>
+	
+	<i class="fa fa-trash-o fa-border i_size_class " 
+	ng-show=" isFav(pl.id) && isSet('2')"></i> 
+	
+ </div>
+</td>
+
+<td  ng-click='sendDetailReq(pl.id); ' class="align-items-center">
+
+ <a class="noBlue i_size_class" href="#progBarDiv" ><i class="fa fa-angle-right fa-border" > </i></a>
+</td>
+
+</tr>
+</div>
+	
+	
+</table>
+
+<!-- Next and prev buttons -->
+<nav aria-label="Page navigation example" 
+ng-show="getPlaces().length">
+  <ul class="pagination justify-content-center">
+    <li class="page-item li_bodrer" ng-class="{'disabled': (page == 0)}">
+      <a class="page-link" href="#resultTable" ng-click="decPage()"  >Previous</a>
+    </li>
+    <li class="page-item li_bodrer" 
+		ng-class="{'disabled': (page == 2) || getPlaces().length < 21}">
+      <a class="page-link" href="#resultTable" ng-click="incPage()"  >Next</a>
+    </li>
+  </ul>
+</nav>
+
+
+</div>
+<!-- </body>
+</html> -->
+
+
+
+
+
+<BR>
+<BR>
+<BR>
+
+</div>

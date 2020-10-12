@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapViewFragment">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="299dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        tools:context=".MapsActivity" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/destinationMap"
+        android:layout_width="333dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Type in the Location"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FromText" />
+
+    <TextView
+        android:id="@+id/FromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="From"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    <fragment
+        android:id="@+id/map_autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="332dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="35dp" /> -->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Travel mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destinationMap" />
+
+    <Spinner
+        android:id="@+id/travelModeSpinner"
+        android:layout_width="333dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+</android.support.constraint.ConstraintLayout>

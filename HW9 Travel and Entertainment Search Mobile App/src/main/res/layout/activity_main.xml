@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Clear_button"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Clear_button"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Search_button"
+        app:layout_constraintTop_toBottomOf="@+id/input_location" />
+
+    <TextView
+        android:id="@+id/keyword_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        android:text="@string/keyword_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_tab" />
+
+    <Button
+        android:id="@+id/Search_button"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Search_button"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_location" />
+
+    <EditText
+        android:id="@+id/keyword_box"
+        android:layout_width="318dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/keyword_box"
+        android:inputType="textPersonName"
+        android:padding="0dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyword_text" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="318dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/planets_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_text" />
+
+    <EditText
+        android:id="@+id/distance"
+        android:layout_width="318dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/distance_box"
+        android:inputType="textPersonName"
+        android:padding="0dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distance_text" />
+
+    <TextView
+        android:id="@+id/category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/category_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyword_box" />
+
+    <TextView
+        android:id="@+id/distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/distance_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category" />
+
+    <TextView
+        android:id="@+id/from_text"
+        android:layout_width="94dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/from_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distance" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/input_location"
+        android:layout_width="318dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/location_box"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_group" />
+
+    <RadioGroup
+        android:id="@+id/location_group"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@+id/radioButton_here"
+        android:padding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_text">
+
+        <RadioButton
+            android:id="@+id/radioButton_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:text="@string/from_here"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/from_text" />
+
+        <RadioButton
+            android:id="@+id/radioButton_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:text="@string/from_loc"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton_here" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/error_loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/input_location"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/holo_red_dark"/>
+
+    <TextView
+        android:id="@+id/error_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/keyword_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyword_text"
+        android:textColor="@android:color/holo_red_dark"/>
+
+    <Button
+        android:id="@+id/search_tab"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_margin="0dp"
+        android:background="@color/colorPrimary"
+        android:padding="0dp"
+        android:text="@string/search_tab"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--android:drawableLeft="@drawable/search" -->
+    <Button
+        android:id="@+id/fav_tab"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_margin="0dp"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:padding="0dp"
+        android:text="@string/fav_tab"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_tab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

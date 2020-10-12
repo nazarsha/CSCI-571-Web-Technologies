@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Places Search</string>
+    <string name="keyword_text">Keyword</string>
+    <string name="Search_button">Search</string>
+    <string name="Clear_button">Clear</string>
+    <string name="keyword_box">Enter keyword</string>
+    <string name="distance_box">Enter distance (default 10 miles)</string>
+    <string name="distance_text">Distance (in miles)</string>
+    <string name="category_text">Category</string>
+    <string name="category_box">Default</string>
+    <string name="from_text">From</string>
+    <string name="from_here">Current location</string>
+    <string name="from_loc">Other.Specify Location</string>
+    <string name="location_box">Type in the Location</string>
+    <string name="progress_bar">Fetching results</string>
+    <string name="search_tab">SEARCH</string>
+    <string name="fav_tab">FAVORITES</string>
+    <string name="title_location_permission">Allow <b>Places Search</b> to access this device's location ?</string>
+    <string name="test_search_hint">Search Place</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="red">first</string>
+    <string name="blue">second</string>
+    <string name="green">third</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>

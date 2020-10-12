@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/favActivityCLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="183dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="260dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_tab"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <Button
+        android:id="@+id/search_tab"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_margin="0dp"
+        android:background="@color/colorPrimary"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:padding="0dp"
+        android:text="@string/search_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fav_tab"
+        android:textAllCaps="false"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_margin="0dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:padding="0dp"
+        android:text="@string/fav_tab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_tab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/table_favs"
+        android:layout_width="343dp"
+        android:layout_height="439dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav_tab" />
+
+
+</android.support.constraint.ConstraintLayout>

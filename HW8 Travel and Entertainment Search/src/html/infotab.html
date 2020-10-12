@@ -1,0 +1,83 @@
+<div   class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-responsive-xs">
+
+<table class="table ">
+  <tr ng-if="curDet.address">
+    <th class="no_wrap" scope="row" class="no_wrap"> Address </th>
+    <td class="no_wrap"> {{curDet.address}}</td>
+  </tr>
+
+  <tr ng-if="curDet.phone">
+    <th scope="row" class="no_wrap" > Phone number </th>
+    <td class="no_wrap"> {{curDet.phone}}</td>
+  </tr>
+
+
+  <tr ng-if="curDet.price">
+    <th class="no_wrap" scope="row"> Price Level </th>
+    <td class="no_wrap"> <i ng-repeat="p in [1,2,3,4,5]| limitTo:curDet.price">&dollar;</i></td>
+  </tr>
+
+<!-- got from here https://stackoverflow.com/questions/30765441/use-font-awesome-star-rating-define-by-width?rq=1
+ -->
+  <tr ng-if="curDet.rating">
+    <th class="no_wrap" scope="row"> Rating </th>
+    <td class="no_wrap"> 
+		<span>{{curDet.rating}}</span>
+		<span ng-repeat="l in [1,2,3,4,5] | limitTo: curDet.rating">
+	  <i class="fa fa-star orange" >
+      </i>	</span>
+	  <i class="fa fa-star-half-empty orange score" 
+	  ng-if ="isFrac(curDet.rating)" >
+	  <span ng-style="{'width':'{{getFrac(curDet.rating)}}%'}"></span>
+	  </i>
+	</td>	  
+  </tr>
+
+
+  <tr ng-if="curDet.url">
+    <th scope="row" class="no_wrap"> Google Page </th>
+    <td class="no_wrap"> <a href={{curDet.url}} target="_blank">{{curDet.url}}</a></td>
+  </tr>
+
+
+
+  <tr ng-if="curDet.website">
+    <th scope="row" class="no_wrap"> Website </th>
+    <td class="no_wrap"> <a href={{curDet.website}} target="_blank">{{curDet.website}}</a></td>
+  </tr>
+
+  <tr ng-if="curDet.hours">
+    <th scope="row" class="no_wrap"> Hours </th>
+    <td class="no_wrap"> 
+	  <span ng-show="curDet.open_now"> Open now: {{getOpenHours(null, curDet.utc_offset)}}</span>
+	  <span ng-show="!curDet.open_now"> Closed now: </span>
+&nbsp; &nbsp; <span class="" data-toggle="modal" data-target="#exampleModal">
+  <a href="#exampleModal"> Daily open hours </a>
+</span>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+		<table class="table table-hover " >
+		<tr ng-repeat="h in getRange(getWeekDay(curDet.utc_offset))">
+		  <td ng-class="{'bold': (h == getWeekDay(curDet.utc_offset))}">
+		    {{getWeekDayName(h)}}
+		  </td>
+          <td ng-class="{'bold': (h == getWeekDay(curDet.utc_offset))}">
+		  {{getOpenHours(h, curDet.utc_offset)}}
+		  </td>
+        </tr>
+		</table>
+      </div>
+    </div>
+  </div>
+</div>
+
+   </td>
+  </tr>
+
+
+
+</table>
+</div>

@@ -1,0 +1,37 @@
+<div id="photoAlbum" >
+
+<!-- <table class="table" ng-show="urls.length > 0" >
+	<p> {{getPhUrls()}} </p>
+  <tr ng-repeat="p in range(getPhUrls().length, getPhUrls().length/2)" >
+  <td ng-repeat="l in range (getPhUrls().length/2, 1)" ng-if="getPhUrls()[p+l]">
+  	<a href="{{getPhUrls()[p+l]}} "  target="_blank" >
+	  <img ng-src="{{getPhUrls()[p+l]}} "  class="img img-thumbnail"/> 
+	</a>
+  </td>
+  </tr>
+  </table> -->
+
+
+	<div class="alert alert-warning" role="alert"
+	ng-show="curDet.photos.length == 0">
+	  No records.
+	</div>  
+
+<div class="row ">
+  <div  class="col-md-3 col-sm-12 col-xs-12 " ng-repeat="p in [0,3,6,9]" >    
+	  <div class="box" ng-repeat="l in [0,1,2]">
+		  <a href="{{urls[p+l]}}" target='_blank' >
+			<img class='img-responsive ' src="{{urls[p+l]}}" 
+				style='width:100%; margin:15px 0' >
+			</a>
+	  </div>
+  </div>
+</div>  
+
+
+
+  
+</div>
+<div id="photos" > </div>
+
+
