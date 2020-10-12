@@ -1,3 +1,5 @@
+In this project I built an Android application to search for places, show photos, reviews, maps, and directions, integrating Google Play services and Yelp review APIs.
+
 The objectives of this assignment were to
 <ul>
 <li> Become familiar with Java, XML and Android Studio for Android app development. </li>
