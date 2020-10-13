@@ -12,5 +12,4 @@ The objectives of this assignment were to
 </ul>
 
 
-Links to reference <b>Web https://www.youtube.com/watch?v=5OTM7qBMxfM&ab_channel=YongruiGao </a></b>
-and <b>Mobile <a>https://www.youtube.com/watch?v=mlR3Ve8rDg8&ab_channel=YongruiGao</a> </b> solutions are provided.
+Links to reference <b>Web https://www.youtube.com/watch?v=5OTM7qBMxfM&ab_channel=YongruiGao </a></b> and <b>Mobile <a>https://www.youtube.com/watch?v=mlR3Ve8rDg8&ab_channel=YongruiGao</a> </b> solutions are provided.
