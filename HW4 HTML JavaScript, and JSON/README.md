@@ -7,4 +7,4 @@ The objectives of this assignment were to
 <li> Transform the content of a JSON document into an HTML page  </li>
 </ul>
 
-A link to the reference solution is provided here<a href= https://www.youtube.com/watch?v=u---5poMJj0&ab_channel=MarcoPapa>
+A link to the reference solution is provided <b><a href= https://www.youtube.com/watch?v=u---5poMJj0&ab_channel=MarcoPapa>here</a></b>.
