@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+In this project, I built a responsive website for travel and entertainment search with features such as showing reviews, maps, directions, and photos of places (e.g. restaurants, theaters), creating a favorites list, and posting place information to Twitter.
+
+I employed Google and Yelp APIs, front-end (AngularJS, Bootstrap, jQuery, and Ajax) and back-end (PHP and Node.js) frameworks and Google App Engine.
+
+>>>>>>> 9330c177cf03e35e9e723b4dafa6062bdc921017
 The objectives of this assignment were to
 <ul>
 <li>Get familiar with the AJAX and JSON technologies
@@ -8,6 +15,9 @@ The objectives of this assignment were to
 </ul>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9330c177cf03e35e9e723b4dafa6062bdc921017
 Links to reference <b>Web https://www.youtube.com/watch?v=5OTM7qBMxfM&ab_channel=YongruiGao </a></b>
 and <b>Mobile <a>https://www.youtube.com/watch?v=mlR3Ve8rDg8&ab_channel=YongruiGao</a> </b> solutions are provided.
